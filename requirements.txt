@@ -1,1 +1,2 @@
+python-cachetclient
 mattermost_bot

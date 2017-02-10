@@ -3,7 +3,7 @@ toubib - Mattermost bot for Cachet
 
 * *Author:* Denis 'jawa' Pompilio <denis.pompilio@gmail.com>
 * *Contact:* Denis 'jawa' Pompilio <denis.pompilio@gmail.com>
-* *Sources:* https://github.com/outini/mattermost-toubib/
+* *Sources:* https://github.com/outini/python-toubib/
 
 Bot usage
 ---------

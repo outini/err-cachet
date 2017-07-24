@@ -2,7 +2,7 @@ err-cachet - ErrBot plugin for Cachet
 =====================================
 
 * *Contact:* Denis 'jawa' Pompilio <denis.pompilio@gmail.com>
-* *Sources:* https://github.com/outini/python-toubib/
+* *Sources:* https://github.com/outini/err-cachet/
 
 Plugin usage
 ------------

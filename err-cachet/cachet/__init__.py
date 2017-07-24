@@ -63,8 +63,6 @@ class Cachet(BotPlugin):
 
     def check_configuration(self, config):
         """Check plugin configuration"""
-        if type(config) != dict:
-            raise Exception("Configuration must be a dict.")
         if "api_token" not in config:
             raise Exception("api_token must be specified.")
         if "api_endpoint" not in config:
@@ -84,7 +82,7 @@ class Cachet(BotPlugin):
 
         self._cachet_client = client.CachetAPIClient(
             api_endpoint=api_endpoint,
-            api_token=api_endpoint
+            api_token=api_token
         )
 
         self._components = cachet.Components(self._cachet_client)

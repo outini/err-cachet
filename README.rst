@@ -1,6 +1,10 @@
 err-cachet - ErrBot plugin for Cachet
 =====================================
 
+.. image:: https://api.codacy.com/project/badge/Grade/0cd02ae19e2c428bbb718d5ff62f650e
+   :alt: Codacy Badge
+   :target: https://www.codacy.com/app/outini/err-cachet?utm_source=github.com&utm_medium=referral&utm_content=outini/err-cachet&utm_campaign=badger
+
 * *Contact:* Denis 'jawa' Pompilio <denis.pompilio@gmail.com>
 * *Sources:* https://github.com/outini/err-cachet/
 

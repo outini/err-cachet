@@ -46,7 +46,8 @@ class Cachet(BotPlugin):
         self._incidents = None
         super().__init__(bot, name)
 
-    def get_configuration_template(self):
+    @staticmethod
+    def get_configuration_template():
         """Return configuration hint for user"""
         return CONFIG_TEMPLATE
 
@@ -61,7 +62,8 @@ class Cachet(BotPlugin):
 
         super().configure(config)
 
-    def check_configuration(self, config):
+    @staticmethod
+    def check_configuration(config):
         """Check plugin configuration"""
         if "api_token" not in config:
             raise Exception("api_token must be specified.")

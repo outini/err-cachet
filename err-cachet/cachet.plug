@@ -1,0 +1,9 @@
+[Core]
+Name = Cachet
+Module = cachet
+
+[Documentation]
+Description = Plugin to interact with Cachet API using cachet driver python-pylls.
+
+[Python]
+Version = 3

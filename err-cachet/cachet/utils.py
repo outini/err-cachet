@@ -19,7 +19,6 @@
 #    along with this program; if not, see <http://www.gnu.org/licenses/>.
 
 import re
-from datetime import datetime
 
 
 def pmatch(word, min_chars=4):

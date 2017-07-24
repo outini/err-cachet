@@ -15,7 +15,7 @@ Plugin usage
     !cachet comp list group <group_id>           List group's components
     !cachet comp show <c_id>                     Show component details
     !cachet comp search <search_regex>           Search component by name
-    !cachet comp <c_id> status set <c_status>    Set component status
+    !cachet comp status set <c_id> <c_status>    Set component status
 
 **Maintenance actions**::
 

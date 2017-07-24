@@ -131,5 +131,5 @@ License
 .. _License: https://github.com/outini/err-cachet/
 .. |Codacy| image:: https://api.codacy.com/project/badge/Grade/0cd02ae19e2c428bbb718d5ff62f650e
 .. _Codacy: https://www.codacy.com/app/outini/err-cachet
-.. |Coverage| image:: https://api.codacy.com/project/badge/Coverage/515d9cec36314e5d95a957ede5eb89f1
+.. |Coverage| image:: https://api.codacy.com/project/badge/Coverage/0cd02ae19e2c428bbb718d5ff62f650e
 .. _Coverage: https://www.codacy.com/app/outini/err-cachet

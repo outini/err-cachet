@@ -1,3 +1,5 @@
+|PythonSupport|_ |License|_ |Codacy|_ |Coverage|_
+
 err-cachet - ErrBot plugin for Cachet
 =====================================
 
@@ -121,3 +123,13 @@ License
 -------
 
 "GNU GENERAL PUBLIC LICENSE" (Version 2) *(see LICENSE file)*
+
+
+.. |PythonSupport| image:: https://img.shields.io/badge/python-3.4-blue.svg
+.. _PythonSupport: https://github.com/outini/err-cachet/
+.. |License| image:: https://img.shields.io/badge/license-GPLv2-green.svg
+.. _License: https://github.com/outini/err-cachet/
+.. |Codacy| image:: https://api.codacy.com/project/badge/Grade/0cd02ae19e2c428bbb718d5ff62f650e
+.. _Codacy: https://www.codacy.com/app/outini/err-cachet
+.. |Coverage| image:: https://api.codacy.com/project/badge/Coverage/515d9cec36314e5d95a957ede5eb89f1
+.. _Coverage: https://www.codacy.com/app/outini/err-cachet

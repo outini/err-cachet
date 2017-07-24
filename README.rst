@@ -104,6 +104,19 @@ Example
     >>> !cachet inci update 40 fixed - "Closing the test incident."
     Incident has been updated.
 
+Tests and coverage
+------------------
+
+Requisites::
+
+  pip install pytest coverage
+
+Testing and getting coverage::
+
+  coverage run --source errbot-root/plugins/err-cachet -m py.test errbot-root/plugins/err-cachet
+  coverage html
+
+
 License
 -------
 

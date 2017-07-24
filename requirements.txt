@@ -1,2 +1,4 @@
+errbot
+websockets==3.2
+mattermostdriver>0.3.0
 python-pylls
-mattermost_bot

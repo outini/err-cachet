@@ -53,8 +53,8 @@ CACHET_INCIDENT_STATUS = {
 CACHET_COMPONENT_STATUS = {
     re.compile(r'^(green|op|operational)$',
                re.IGNORECASE): (1, "Operational"),
-    re.compile(r'^(blue|pi|Performance ?Issue)$',
-               re.IGNORECASE): (2, "Performance Issue"),
+    re.compile(r'^(blue|pi|Performance ?Issues)$',
+               re.IGNORECASE): (2, "Performance Issues"),
     re.compile(r'^(orange|po|Partial ?Outage)$',
                re.IGNORECASE): (3, "Partial Outage"),
     re.compile(r'^(red|mo|Major ?Outage)$',

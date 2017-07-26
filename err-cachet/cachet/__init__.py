@@ -24,7 +24,7 @@ import requests
 from errbot import BotPlugin, botcmd, arg_botcmd
 from . import utils
 from .resources import views
-from pylls import cachet, client
+from pylls import cachet, client, tests
 
 VERSION = '0.2.0'
 
@@ -82,10 +82,14 @@ class Cachet(BotPlugin):
         self.log.debug("Cachet API endpoint: %s" % api_endpoint)
         self.log.debug("Cachet API token: %s" % api_token)
 
-        self._cachet_client = client.CachetAPIClient(
-            api_endpoint=api_endpoint,
-            api_token=api_token
-        )
+        # Activate mock API of requested
+        if os.environ.get('TEST_API'):
+            self._cachet_client = tests.test_api.api_client()
+        else:
+            self._cachet_client = client.CachetAPIClient(
+                api_endpoint=api_endpoint,
+                api_token=api_token
+            )
 
         self._components = cachet.Components(self._cachet_client)
         self._incidents = cachet.Incidents(self._cachet_client)

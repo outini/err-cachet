@@ -20,7 +20,6 @@
 
 import os
 
-
 pytest_plugins = ["errbot.backends.test"]
 extra_plugin_dir = '.'
 
@@ -29,8 +28,8 @@ extra_plugin_dir = '.'
 
 ONLY_ENDPOINT = {'api_endpoint': "XXXXXXXXXXXXXXXX"}
 ONLY_TOKEN = {'api_token': "XXXXXXXXXXXXXXXXXXXXX"}
-CONFIG = {'api_endpoint': os.environ.get("cachet_api_endpoint"),
-          'api_token': os.environ.get("cachet_api_token")}
+CONFIG = {'api_endpoint': 'https://status/api/v1',
+          'api_token': 'XXXXXXXXXXXXXXXXXXXXX'}
 
 
 def test_cachet_plugin_configuration(testbot):
@@ -77,8 +76,8 @@ def test_cachet_comp_show(testbot):
     """Test the cachet_comp_show command"""
     testbot.push_message('!cachet comp show 999999')
     assert 'Unknown component id 999999' in testbot.pop_message()
-    testbot.push_message('!cachet comp show 27')
-    assert 'Component: 27' in testbot.pop_message()
+    testbot.push_message('!cachet comp show 1')
+    assert 'Component: 1' in testbot.pop_message()
 
 
 def test_cachet_comp_search(testbot):
@@ -127,7 +126,7 @@ def test_cachet_inci_show(testbot):
     """Test the cachet_inci_show command"""
     testbot.push_message('!cachet inci show 999999')
     assert 'Unknown incident number 999999' in testbot.pop_message()
-    testbot.push_message('!cachet inci show 11')
+    testbot.push_message('!cachet inci show 1')
     assert 'Incident status:' in testbot.pop_message()
 
 
@@ -161,15 +160,15 @@ def test_cachet_inci_new(testbot):
 
 def test_cachet_inci_update(testbot):
     """Test the cachet_inci_update command"""
-    testbot.push_message('!cachet inci update 11 XX po "Test update."')
+    testbot.push_message('!cachet inci update 1 XX po "Test update."')
     assert 'Unknown incident status: XX' in testbot.pop_message()
-    testbot.push_message('!cachet inci update 11 invest XX "Fail update."')
+    testbot.push_message('!cachet inci update 1 invest XX "Fail update."')
     assert 'Unknown component status: XX' in testbot.pop_message()
     testbot.push_message('!cachet inci update 999999 invest po "Fail update."')
     assert 'Unknown incident number 999999' in testbot.pop_message()
-    testbot.push_message('!cachet inci update 11 - - "Test update."')
+    testbot.push_message('!cachet inci update 1 - - "Test update."')
     assert 'Incident has been updated.' in testbot.pop_message()
-    testbot.push_message('!cachet inci update 11 invest po "Test update."')
+    testbot.push_message('!cachet inci update 1 invest po "Test update."')
     assert 'Incident has been updated.' in testbot.pop_message()
 
 
@@ -183,15 +182,15 @@ def test_cachet_inci_set_component(testbot):
     """Test the cachet_inci_set_component command"""
     testbot.push_message('!cachet inci set component 9999999 1')
     assert 'Unknown incident number 9999999' in testbot.pop_message()
-    testbot.push_message('!cachet inci set component 11 9999999')
+    testbot.push_message('!cachet inci set component 1 9999999')
     assert 'Unknown component id 9999999' in testbot.pop_message()
-    testbot.push_message('!cachet inci set component 11 1')
+    testbot.push_message('!cachet inci set component 1 1')
     assert 'Impacted component has been updated.' in testbot.pop_message()
 
 
 def test_cachet_inci_set_date(testbot):
     """Test the cachet_inci_set_date command"""
-    testbot.push_message("!cachet inci set date 11 2017-04-23")
+    testbot.push_message("!cachet inci set date 1 2017-04-23")
     assert "API does not support this operation" in testbot.pop_message()
 
 
@@ -199,7 +198,7 @@ def test_cachet_inci_rename(testbot):
     """Test the cachet_inci_rename command"""
     testbot.push_message("!cachet inci rename 9999999 'New name'")
     assert 'Unknown incident number 9999999' in testbot.pop_message()
-    testbot.push_message("!cachet inci rename 11 'New name'")
+    testbot.push_message("!cachet inci rename 1 'New name'")
     assert "Incident name has been updated." in testbot.pop_message()
 
 
@@ -207,7 +206,7 @@ def test_cachet_inci_set_hidden(testbot):
     """Test the cachet_inci_set_hidden command"""
     testbot.push_message("!cachet inci set hidden 9999999")
     assert 'Unknown incident number 9999999' in testbot.pop_message()
-    testbot.push_message("!cachet inci set hidden 11")
+    testbot.push_message("!cachet inci set hidden 1")
     assert "Incident is hidden from status page." in testbot.pop_message()
 
 
@@ -215,5 +214,5 @@ def test_cachet_inci_set_visible(testbot):
     """Test the cachet_inci_set_visible command"""
     testbot.push_message("!cachet inci set visible 9999999")
     assert 'Unknown incident number 9999999' in testbot.pop_message()
-    testbot.push_message("!cachet inci set visible 11")
+    testbot.push_message("!cachet inci set visible 1")
     assert "Incident has been set to visible" in testbot.pop_message()
